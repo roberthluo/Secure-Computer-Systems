@@ -1,0 +1,3 @@
+Public key cryptography involves a pair of keys known as a public key and a private key (a public key pair), which are associated with an entity that needs to authenticate its identity electronically or to sign or encrypt data. Each public key is published and the corresponding private key is kept secret. Data that is encrypted with the public key can be decrypted only with the corresponding private key.
+
+RSA public key pairs can be any size. Typical sizes today are 1024 and 2048 bits.
