@@ -67,15 +67,30 @@ def signing_verifying_key(file_hash, pub_key):
     print original_key
 
 
-def encryption_decryption():
-    key = Fernet.generate_key()
-    f = Fernet(key)
-    token = f.encrypt(b"my Deep dark secret")
-    print token
+def encryption():
+    message = (b"encrypted data")
+    cipertext = public_crypted_key.encrypt(
+        message,
+        padding.OAEP(
+        mgf=padding.MGF1(algorithm=hashes.SHA1()),
+            algorithm=hashes.SHA1(),
+            label=None
+        )
+    )
+    print(cipertext)
+    return cipertext
 
-    original_key = f.decrypt(token)
-    print original_key
-
+def decryption(cipertext):
+    plaintext = public_crypted_key.dencrypt(
+        cipertext,
+        padding.OAEP(
+        mgf=padding.MGF1(algorithm=hashes.SHA1()),
+            algorithm=hashes.SHA1(),
+            label=None
+        )
+    )
+    print(plaintext)
+    return plaintext
 
 def read_file(filename):
     with open(filename, 'r') as f:
@@ -89,5 +104,9 @@ if __name__ == "__main__":
     new_keys()
     sign_file()
     hash_file()
+
+    print("encryption and decryption")
+    encrypted_msg = encryption()
+    dencrypted_msg = decryption(encrypted_msg)
 else:
     print("Symmetric.py is being imported")
