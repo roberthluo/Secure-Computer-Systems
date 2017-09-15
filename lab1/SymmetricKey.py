@@ -10,24 +10,34 @@ from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.asymmetric import padding
 from cryptography.hazmat.primitives.asymmetric import utils
 
+
+public_crypted_key = {}
 private_crypted_key = {}
+
+public_signed_key = {}
 private_signed_key = {}
+
 
 def new_keys():
 
     global private_crypted_key
     global private_signed_key
+    global public_crypted_key
+    global public_signed_key
+
     private_crypted_key = rsa.generate_private_key(
     public_exponent=65537,
     key_size=2048,
     backend=default_backend())
     print(private_crypted_key)
+    public_crypted_key = private_crypted_key.public_key()
 
     private_signed_key = rsa.generate_private_key(
     public_exponent=65537,
     key_size=2048,
     backend=default_backend())
     print(private_signed_key)
+    public_signed_key = private_signed_key.public_key()
 
 def sign_file():
     message = (b"A message I need to sign")
@@ -81,7 +91,7 @@ def encryption():
     return cipertext
 
 def decryption(cipertext):
-    plaintext = public_crypted_key.dencrypt(
+    plaintext = private_crypted_key.decrypt(
         cipertext,
         padding.OAEP(
         mgf=padding.MGF1(algorithm=hashes.SHA1()),
