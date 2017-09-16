@@ -19,3 +19,9 @@ https://cryptography.io/en/latest/hazmat/primitives/asymmetric/rsa/
 
 
 Had this issue: https://github.com/JoshKaufman/ursa/issues/14
+
+
+2)
+https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/3/html/Security_Guide/ch-exploits.html
+
+http://sectools.org/tag/vuln-scanners/
