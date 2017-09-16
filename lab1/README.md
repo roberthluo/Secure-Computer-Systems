@@ -16,3 +16,6 @@ The  TA  will  observe  the  protection  of  an  unprotected  file,  and  the  u
 I am using the python library [Cryptography](https://cryptography.io/).
 
 https://cryptography.io/en/latest/hazmat/primitives/asymmetric/rsa/
+
+
+Had this issue: https://github.com/JoshKaufman/ursa/issues/14
