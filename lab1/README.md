@@ -25,3 +25,7 @@ Had this issue: https://github.com/JoshKaufman/ursa/issues/14
 https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/3/html/Security_Guide/ch-exploits.html
 
 http://sectools.org/tag/vuln-scanners/
+
+https://www.cvedetails.com/vulnerability-list/vendor_id-26/product_id-3436/version_id-92758/Microsoft-IIS-7.5.html
+
+iis 7.5 Security Vulnerabilites
