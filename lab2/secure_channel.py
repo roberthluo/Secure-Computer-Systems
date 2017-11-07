@@ -40,8 +40,6 @@ def get_info():
     print ("Please enter your password!")
     stored_data['password'] = sys.stdin.readline()
 
-
-
 def check_sms():
     generated_value = stored_data['accessCode']
     print("generated_value: ", generated_value)
@@ -55,8 +53,6 @@ def check_sms():
         print("You have logged in!")
     else:
         print("That is not your sms verification code!")
-
-
 
 def test_twilio():
     data = {'account_sid': '',
