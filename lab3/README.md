@@ -1,4 +1,5 @@
-Writing Snort rules to identify attack and apply tested rules. 
+Writing Snort rules to identify attacks and test Snort rules with attacks.
+Ran Snort on Docker
 
 
 Rudimentary Anti-virus program
