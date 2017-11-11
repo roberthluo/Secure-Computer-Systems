@@ -18,3 +18,5 @@ sequence to “xxxxxxxx”) and quarantine the file (move it to a specified fold
 Keep the user informed (through the UI) about what the program is doing, what infected
 files it has found, whether inoculation was done, and whether the dangerous file was
 quarantined.
+
+http://resources.infosecinstitute.com/snort-rules-workshop-part-one/#gref
